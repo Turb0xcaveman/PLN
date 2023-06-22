@@ -7,9 +7,7 @@ import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract Plnning is ERC20, ERC20Burnable, Ownable {
-    constructor() ERC20("Plnning", "PLN") {}
-
-    function mint(address to, uint256 amount) public onlyOwner {
-        _mint(to, amount);
+    constructor() ERC20("Plnning", "PLN") {
+        _mint(msg.sender, 1000000000 ether);
     }
 }
